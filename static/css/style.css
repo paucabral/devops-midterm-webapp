@@ -1,1 +1,215 @@
 /* CSS */
+#indexBody {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("../img/bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.01)
+  );
+  color: #eee;
+}
+
+header a {
+  color: #eee;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: rgb(38, 241, 255);
+}
+
+.brand {
+  font-weight: 1000;
+  color: rgb(38, 241, 255);
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.pdTexts {
+  padding-top: 5;
+  padding-bottom: 5em;
+}
+
+#pdTitle {
+  text-transform: uppercase;
+  color: rgb(3, 220, 228);
+  font-size: 4em;
+}
+
+#pdDescription {
+  width: 40%;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.01)
+  );
+  color: #eee;
+}
+
+header a {
+  color: #eee;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: rgb(38, 241, 255);
+}
+
+.brand {
+  font-weight: 1000;
+  color: rgb(38, 241, 255);
+}
+
+nav ul {
+  display: flex;
+  text-transform: uppercase;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 1rem 0;
+  margin: 0;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+nav ul li a:last-child {
+  margin-right: 0;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: crimson;
+  left: 0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+}
+
+nav ul li a::before {
+  top: 0;
+  transform-origin: left;
+}
+
+nav ul li a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.nav-item:hover {
+  color: rgb(38, 241, 255) !important;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.95);
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transition: opacity 650ms;
+  transform: scale(0);
+  opacity: 0;
+  display: none;
+}
+
+.context-dark,
+.bg-gray-dark,
+.bg-primary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+footer {
+  background: #0f1318;
+  bottom: 0;
+  width: 100%;
+  position: relative;
+}
+
+.footer-classic a,
+.footer-classic a:focus,
+.footer-classic a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-list li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+footer a:hover {
+  color: rgb(38, 241, 255);
+}
+
+.nav-list li a:hover:before {
+  margin-left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 23px;
+  font: 900 13px/1 "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.social-container .col {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-list li a:before {
+  content: "\ ";
+  font: 400 21px/1;
+  color: #4d6de6;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-left: -28px;
+  margin-right: 7px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.22s ease;
+}
+
+@media screen and (max-width: 400px) {
+  #pdDescription {
+    width: 90%;
+  }
+}

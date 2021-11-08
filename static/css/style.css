@@ -235,7 +235,8 @@ ol {
   border-radius: 50%;
 }
 
-.dev-box {
+.feature-section p {
+  font-size: 1.4em;
 }
 
 @media screen and (max-width: 450px) {
@@ -250,5 +251,10 @@ ol {
   #pdDescription {
     width: 90%;
     font-size: 1.3em;
+  }
+
+  .feature-section {
+    text-align: center !important;
+    padding: 0.2em !important;
   }
 }

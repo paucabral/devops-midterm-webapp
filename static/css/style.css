@@ -14,19 +14,37 @@ html {
   background-size: cover;
 }
 
-#indexDifferential {
+#differential-diagnosis {
   min-height: 100vh;
-  background: #0c30b1;
+  background: linear-gradient(
+      to right,
+      rgba(39, 96, 219, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/diff-diag.jpg") center no-repeat;
+  background-size: cover;
 }
 
-#indexRecomm {
+#recommendations {
   min-height: 100vh;
-  background: #9c0e50;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(39, 219, 114, 0.6)
+    ),
+    url("../img/recom.jpg") center no-repeat;
+  background-size: cover;
 }
 
-#indexNearby {
+#nearby-hospitals {
   min-height: 100vh;
-  background: #4de65a;
+  background: linear-gradient(
+      to right,
+      rgba(180, 51, 94, 0.6),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url("../img/hospital.jpg") center no-repeat;
+  background-size: cover;
 }
 
 #developers {
@@ -221,6 +239,10 @@ ol {
 }
 
 @media screen and (max-width: 450px) {
+  .row {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
   #pdTitle {
     width: 90%;
     font-size: 3em;

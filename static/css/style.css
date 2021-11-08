@@ -1,4 +1,12 @@
 /* CSS */
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 #indexBody {
   min-height: 100vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
@@ -23,7 +31,9 @@
 
 #developers {
   min-height: 100vh;
-  background: #4d6de6;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url("../img/dev.jpg") center no-repeat;
+  background-size: cover;
 }
 
 header {
@@ -200,6 +210,14 @@ ol {
   opacity: 0;
   visibility: hidden;
   transition: 0.22s ease;
+}
+
+.dev-img {
+  width: 10em;
+  border-radius: 50%;
+}
+
+.dev-box {
 }
 
 @media screen and (max-width: 450px) {

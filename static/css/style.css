@@ -18,7 +18,7 @@ html {
   min-height: 100vh;
   background: linear-gradient(
       to right,
-      rgba(39, 96, 219, 0.6),
+      rgba(22, 63, 151, 0.6),
       rgba(0, 0, 0, 0.8)
     ),
     url("../img/diff-diag.jpg") center no-repeat;
@@ -30,7 +30,7 @@ html {
   background: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.8),
-      rgba(39, 219, 114, 0.6)
+      rgba(19, 131, 66, 0.6)
     ),
     url("../img/recom.jpg") center no-repeat;
   background-size: cover;
@@ -40,7 +40,7 @@ html {
   min-height: 100vh;
   background: linear-gradient(
       to right,
-      rgba(180, 51, 94, 0.6),
+      rgba(139, 32, 68, 0.6),
       rgba(0, 0, 0, 0.8)
     ),
     url("../img/hospital.jpg") center no-repeat;

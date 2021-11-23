@@ -32,6 +32,11 @@
 <body>
   <h1>Home</h1>
   <p>{{ session['username'] }}</p>
+  <p>{{ session['public_id'] }}</p>
+  <p>{{ session['token'] }}</p>
+  <form method="POST" action="/logout">
+    <button type="submit" class="btn btn-primary">logout</button>
+  </form>
 </body>
 
 </html>

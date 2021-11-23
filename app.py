@@ -1,8 +1,9 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, redirect, url_for, render_template, request, session
 from api import login as loginAPI
 from api import register as registerAPI
 
 app = Flask(__name__)
+app.secret_key = 'TGVLXPZHU5UN9OsOzyTnkeAU8YxKHb8V'  # hide in .env
 
 
 @app.route("/", methods=['GET'])
@@ -13,7 +14,10 @@ def index():
 @app.route("/register", methods=['GET', 'POST'])
 def registration():
     if request.method == 'GET':
-        return render_template('registration.html')
+        if session.get('username'):
+            return redirect('/home')
+        else:
+            return render_template('registration.html')
     elif request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -33,7 +37,10 @@ def registration():
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     if request.method == 'GET':
-        return render_template('login.html')
+        if "username" in session:
+            return redirect('/home')
+        else:
+            return render_template('login.html')
     elif request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -43,12 +50,27 @@ def login():
             message = response['message']
             return render_template('login.html', message=message)
         else:
-            return redirect('/login')
+            session["username"] = response["username"]
+            session["public_id"] = response["public_id"]
+            session["token"] = response["token"]
+            return redirect('/home')
+
+
+@app.route("/logout", methods=['POST'])
+def logout():
+    if session.get('username'):
+        session.clear()
+        return redirect('/login')
+    else:
+        return redirect('/login')
 
 
 @app.route("/home", methods=['GET'])
 def home():
-    return render_template('home.html')
+    if session.get('username'):
+        return render_template('home.html')
+    else:
+        return redirect('/login')
 
 
 if __name__ == '__main__':

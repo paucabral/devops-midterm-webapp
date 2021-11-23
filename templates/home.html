@@ -30,13 +30,124 @@
 </head>
 
 <body>
-  <h1>Home</h1>
-  <p>{{ session['username'] }}</p>
-  <p>{{ session['public_id'] }}</p>
-  <p>{{ session['token'] }}</p>
-  <form method="POST" action="/logout">
-    <button type="submit" class="btn btn-primary">logout</button>
-  </form>
+  <header class="row g-0">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark container-fluid" style="background-color: rgb(10, 165, 165);">
+        <div class="container">
+          <a style="font-size: x-large; font-weight: bold;" class="navbar-brand" href="#">HIGH<span
+              class="brand">GROUNDS</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse align-items-center" id="navbarTogglerDemo02">
+            <ul class="nav navbar-nav ms-auto align-items-center">
+              <li><a href="#" class="nav-item nav-link" style="color: #eee;"><i class="fa fa-home fa-3"
+                    aria-hidden="true"></i> Home</a></li>
+              <li>
+                <form method="POST" action="/logout">
+                  <button type="submit" class="btn btn-outline-info text-white" style="font-weight: bold;"><i class="fas fa-sign-out-alt"></i> Sign Out</button>
+                </form>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid mt-3 g-0">
+    <div class="text-center">
+      <span style="font-size: x-large; font-weight: bold;" class="navbar-brand" href="#">HIGH<span class="brand"
+          style="color: rgb(10, 165, 165);">GROUNDS</span></span>
+      <h1 style="font-weight: bold; font-size: 3em;">Health Kiosk</h1>
+    </div>
+    <br>
+    <div class="container">
+      <div class="m-3">
+        <span style="font-size: 1.5em;">Hello,</span>
+        <h2>{{ session['username'] }}</h2>
+        <br>
+        <div class="container">
+
+          <div class="row">
+            <h4>What do you need?</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-md-3">
+              <a href="#" style="text-decoration: none;">
+                <div class="card text-white bg-warning mb-3" style="background-color: #ffb300 !important;">
+                  <div class="card-header">
+                    <h5 class="card-title">Differential Diagnosis</h5>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="card-title"><i class="fas fa-search-plus"></i></h3>
+                    <p class="card-text">
+                      Check your symptoms and determine the likeliness of a disease.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" style="text-decoration: none;">
+              <div class="card text-white bg-warning mb-3" style="background-color: #ffb300 !important;">
+                <div class="card-header">
+                  <h5 class="card-title">Diseases List</h5>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"><i class="fas fa-disease"></i></h3>
+                  <p class="card-text">
+                    View list of diseases from our database.
+                  </p>
+                </div>
+              </div>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" style="text-decoration: none;">
+              <div class="card text-white bg-warning mb-3" style="background-color: #ffb300 !important;">
+                <div class="card-header">
+                  <h5 class="card-title">Symptoms List</h5>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"><i class="fas fa-vials"></i></h3>
+                  <p class="card-text">
+                    View list of symptoms from our database.
+                  </p>
+                </div>
+              </div>
+              </a>
+            </div>
+
+            <div class="col-md-3">
+              <a href="#" style="text-decoration: none;">
+              <div class="card text-white bg-warning mb-3" style="background-color: #ffb300 !important;">
+                <div class="card-header">
+                  <h5 class="card-title">Nearby Hospitals</h5>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"><i class="fas fa-hospital"></i></h3>
+                  <p class="card-text">
+                    Find Hospitals nearby hospitals around your location.
+                  </p>
+                </div>
+              </div>
+              </a>
+            </div>
+          
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </body>
 
 </html>

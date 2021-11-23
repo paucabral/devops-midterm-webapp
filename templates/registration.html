@@ -41,7 +41,7 @@
         <br>
   
         {% if message %}
-        <div class="register-message-danger mb-3 p-2 card border-warning">
+        <div id="message" class="register-message-danger mb-3 p-2 card border-warning">
           {{ message }}
         </div>
         {% endif %}
@@ -63,15 +63,15 @@
           autofocus>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input name="password" type="password" id="inputPassword" class="form-control form-control mt-2 mb-2" placeholder="Password" required>
+        <input name="password" type="password" id="inputPassword" class="form-control form-control mt-2 mb-2" placeholder="Password" onchange='check_pass();' required>
 
         <label for="inputPassword2" class="sr-only">Password</label>
         <input name="password2" type="password" id="inputPassword2" class="form-control form-control mt-2 mb-2"
-          placeholder="Confirm Password" required>
+          placeholder="Confirm Password" onchange='check_pass();' required>
 
         <div class="checkbox mb-3">
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign In</button>
+        <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
   
         <hr>
   

@@ -264,6 +264,10 @@ ol {
   background-color: rgb(255, 0, 0, 0.1);
 }
 
+.register-message-danger {
+  background-color: rgba(207, 207, 42, 0.329);
+}
+
 .form-signin {
   width: 100%;
   max-width: 450px;

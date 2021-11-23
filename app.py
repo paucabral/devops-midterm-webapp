@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request
 from api import login as loginAPI
+from api import register as registerAPI
 
 app = Flask(__name__)
 
@@ -9,9 +10,24 @@ def index():
     return render_template('index.html')
 
 
-@app.route("/register", methods=['GET'])
+@app.route("/register", methods=['GET', 'POST'])
 def registration():
-    return render_template('registration.html')
+    if request.method == 'GET':
+        return render_template('registration.html')
+    elif request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        email = request.form.get('email')
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        response = registerAPI(username, password, email,
+                               first_name, last_name)
+
+        if "message" in response.keys():
+            message = response['message']
+            return render_template('registration.html', message=message)
+        else:
+            return redirect('/login')
 
 
 @app.route("/login", methods=['GET', 'POST'])

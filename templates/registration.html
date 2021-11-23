@@ -55,7 +55,7 @@
               autofocus style="border-radius: 5px;">
         </div>
         <label for="inputEmaik" class="sr-only">Email</label>
-        <input name="email" type="text" id="inputEmail" class="form-control form-control mt-2 mb-2"
+        <input name="email" type="email" id="inputEmail" class="form-control form-control mt-2 mb-2"
           placeholder="Email" required autofocus>
 
         <label for="inputUsername" class="sr-only">Username</label>
@@ -63,7 +63,7 @@
           autofocus>
 
         <label for="inputPassword" class="sr-only">Password</label>
-        <input name="password" type="password" id="inputPassword" class="form-control form-control mt-2 mb-2" placeholder="Password" onchange='check_pass();' required>
+        <input name="password" type="password" id="inputPassword" class="form-control form-control mt-2 mb-2" placeholder="Password" minlength="8" onchange='check_pass();' required>
 
         <label for="inputPassword2" class="sr-only">Password</label>
         <input name="password2" type="password" id="inputPassword2" class="form-control form-control mt-2 mb-2"

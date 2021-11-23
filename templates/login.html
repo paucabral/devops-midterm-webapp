@@ -4,7 +4,7 @@
 <head>
   <meta charset='utf-8' />
   <meta name='viewport' content='width=device-width, initial-scale=1' />
-  <title>High Grounds Health Kiosk</title>
+  <title>Sign In</title>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -38,7 +38,7 @@
       <h1 style="font-weight: bold;">Health Kiosk</h1>
       <br>
       <div class="card card-signin">
-        <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+        <h1 class="h3 mb-3 font-weight-normal">Sign In</h1>
         <br>
         
         {% if message %}
@@ -48,9 +48,9 @@
         {% endif %}
 
         <label for="inputUsername" class="sr-only">Username</label>
-        <input name="username" type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+        <input name="username" type="username" id="inputUsername" class="form-control mt-2 mb-2" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input name="password" type="password" id="inputPassword" class="form-control mt-2 mb-2" placeholder="Password" required>
         <div class="checkbox mb-3">
           <!-- <label>
                   <input type="checkbox" value="remember-me"> Remember me
